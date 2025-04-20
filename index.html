@@ -1,14 +1,9 @@
-function openXApp() {
-  // Attempt to open the X app
-  window.location.href = "x://tonghan28559415/status/1914099650824733168";
-  // Fallback to app store if app isn't opened after 2 seconds
-  setTimeout(() => {
-    if (document.hidden) return; // App opened successfully
-    const userAgent = navigator.userAgent.toLowerCase();
-    if (/iphone|ipad|ipod/.test(userAgent)) {
-      window.location.href = "https://apps.apple.com/us/app/x/id333903271";
-    } else if (/android/.test(userAgent)) {
-      window.location.href = "https://play.google.com/store/apps/details?id=com.twitter.android";
-    }
-  }, 2000);
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirect to X Post</title>
+</head>
+<body onload="openXApp()">
+  <p>Opening X app... If not redirected, <a href="https://x.com/tonghan28559415/status/1914099650824733168">click here</a>.</p>
+</body>
+</html>
